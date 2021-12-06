@@ -10,12 +10,14 @@ html {
 }
 
 body {
+	background-color: red;
 	font-family: Gilroy;
 	font-style: normal;
-	font-size: 12px;
+	font-size: 15px;
 	line-height: 18px;
 	font-weight: normal;
 	position: relative;
+
 }
 
 *, *::before, *::after {
@@ -33,6 +35,7 @@ body {
 	url("./../img/png/clouds.png") no-repeat center -195px,
 	url("./../img/png/clouds.png") no-repeat center -270px,
 	url("./../img/png/bg-image.png") no-repeat center center;
+
 }
 
 main {
