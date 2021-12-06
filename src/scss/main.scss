@@ -1,0 +1,572 @@
+/***** Reset *****/
+@import "reset";
+/***** Fonts *****/
+@import "fonts";
+/***** Pattern *****/
+@import "pattern";
+/***** Box-sizing *****/
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Gilroy;
+	font-style: normal;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: normal;
+	position: relative;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+.bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include size(100%, 100%);
+	z-index: -1;
+	background: url("./../img/png/clouds-2.png") no-repeat center top,
+	url("./../img/png/clouds.png") no-repeat center -65px,
+	url("./../img/png/clouds.png") no-repeat center -195px,
+	url("./../img/png/clouds.png") no-repeat center -270px,
+	url("./../img/png/bg-image.png") no-repeat center center;
+}
+
+main {
+	padding: 41px 20px;
+}
+
+.header {
+	margin: 0 auto 73px;
+	max-width: 962px;
+
+	&__logo_pict {
+		margin-right: 15.14px;
+	}
+
+	&__logo_title {
+		color: black;
+		max-width: 261px;
+		font-size: 13px;
+		text-align: left;
+		line-height: 18px;
+	}
+}
+
+.section-top {
+	margin-bottom: 49px;
+
+	&__title {
+		margin-bottom: 12px;
+		@include font_size-line(17px, 20px);
+	}
+
+	&__quest {
+		max-width: 413px;
+		@include font_size-line(24px, 34px);
+		margin-bottom: 27px;
+	}
+
+	&__items-wrapper {
+		flex-wrap: wrap;
+
+		.item {
+			width: 270px;
+
+			&__logo {
+				@include size(60px, 60px);
+				margin-right: 9px;
+			}
+
+			&:not(:last-child) {
+				margin-right: 51px;
+			}
+			&__content {
+				@include font_size-line(12px, 18px);
+			}
+		}
+	}
+}
+
+.section-rect {
+	max-width: 962px;
+	min-height: 490px;
+	background-color: #fff;
+	padding: 10px;
+	box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	margin: 0 auto;
+	position: relative;
+
+	.block {
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+		border-radius: 8px;
+	}
+
+	.quest-line__block {
+		height: 76px;
+		padding: 28px 26px 28px 27px;
+		margin-bottom: 10px;
+
+		.quest-line {
+			width: 100%;
+			height: 16px;
+			border: 0.5px solid rgba(0, 0, 0, 0.05);
+			box-sizing: border-box;
+			box-shadow: inset 0px 10px 20px rgba(255, 255, 255, 0.16);
+			border-radius: 999px;
+			position: relative;
+
+			.line {
+				@include size(50%, 10px);
+
+				&.active {
+					background: linear-gradient(0deg, rgba(80, 181, 32, 0.31), rgba(80, 181, 32, 0.31));
+					box-shadow: inset 0px 10px 20px rgba(255, 255, 255, 0.16);
+					border-radius: 999px;
+				}
+
+				&.inactive {
+					background-color: $lightgray;
+				}
+			}
+
+			.steps__wrapper {
+				position: absolute;
+				width: 100%;
+
+				.step {
+					@include size(20px, 20px);
+					border-radius: 999px;
+					box-shadow: inset 0px 10px 20px rgba(255, 255, 255, 0.16);
+
+					&.step-active {
+						background: linear-gradient(0deg, $green, $green);
+
+					}
+
+					&.step-inactive {
+						background: linear-gradient(0deg, #FFF, #FFF);
+						border: 3px solid #F5F5F5;
+					}
+				}
+			}
+		}
+	}
+
+	.quest-content__block {
+		padding: 34px;
+		min-height: 384px;
+
+		.quest__title {
+			text-transform: uppercase;
+			@include font_size-line(14px, 17px);
+			margin-bottom: 14px;
+		}
+
+		.quest__main {
+			@include font_size-line(24px, 29px);
+			margin-bottom: 37px;
+			max-width: 300px;
+			text-align: center;
+		}
+
+		.input[type="number"] {
+			border-radius: 4px;
+			border: none;
+			background-color: $lightgray;
+			@include size(210px, 61px);
+			@include font_size-line(16px, 20px);
+			box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.02);
+			font-family: Gilroy;
+			padding: 19px;
+			z-index: 1;
+		}
+
+		.input-radio__wrapper {
+			width: 271px;
+			padding: 14px;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			box-sizing: border-box;
+			//box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
+			border-radius: 4px;
+
+			label {
+				@include font_size-line(16px, 26px);
+				flex-wrap: nowrap;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+
+			input[type="radio"] {
+				&:checked, &:not(:checked) {
+					position: absolute;
+					left: -9999px;
+				}
+
+				&:checked + label,
+				&:not(:checked) + label {
+					display: inline-block;
+					position: relative;
+					padding-left: 31px;
+					cursor: pointer;
+				}
+
+				&:checked + label:before,
+				&:not(:checked) + label:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 2px;
+					@include size(20px, 20px);
+					border: 0.5px solid rgba(0, 0, 0, 0.08);
+					background-color: #fff;
+					border-radius: 999px;
+					box-shadow: inset 0px 10px 20px rgba(255, 255, 255, 0.16);
+					z-index: 1;
+				}
+
+				&:checked + label:after,
+				&:not(:checked) + label:after {
+					content: "";
+					position: absolute;
+					-webkit-transition: all 0.2s ease;
+					-moz-transition: all 0.2s ease;
+					-o-transition: all 0.2s ease;
+					transition: all 0.2s ease;
+					left: 3px;
+					top: 5px;
+					@include size(14px, 14px);
+					border-radius: 999px;
+					z-index: 1;
+				}
+
+				&:not(:checked) + label:after {
+					background-color: #F2F2F2;
+				}
+
+				&:checked + label:after {
+					background: linear-gradient(180deg, #FEE9A1 0%, #FFDD64 100%);
+				}
+			}
+		}
+	}
+
+	button.transition {
+		@include size(146px, 58px);
+		background: linear-gradient(104.01deg, #FBDB6A 5.19%, #FFEBA3 49.97%, #FBDB6A 95.49%);
+		box-shadow: inset 0px 0px 26px rgba(255, 255, 255, 0.54),
+		0px 4px 0px #E8C240;
+		border: none;
+		border-radius: 52px;
+		font-family: Gilroy;
+		@include font_size-line(16px, 19px);
+		position: absolute;
+		bottom: -25px;
+		z-index: 1;
+
+		&:hover {
+			background: linear-gradient(104.34deg, #FFCF23 -1.99%, #FCE287 52.26%, #FFCE23 107.41%);
+		}
+
+		&:active {
+			opacity: 0.5;
+		}
+
+		.next-icon {
+			margin-left: 12px;
+		}
+	}
+
+	&.section-rect-4 {
+		.quest-content__block {
+			padding: 22px;
+
+			.quest__main {
+				margin-bottom: 18px;
+			}
+
+			.inputs__container {
+				max-width: 510px;
+
+				.input-radio__wrapper {
+					margin: 5px;
+					width: 160px;
+					padding: 6px 14px 6px;
+				}
+			}
+
+			.input-txt__wrapper {
+				margin: 12px 0 11px;
+				position: relative;
+				z-index: 1;
+
+				input {
+					@include size(307px, 90px);
+					background: rgba(250, 250, 250, 0.62);
+					box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.01);
+					border-radius: 4px;
+					border: none;
+					padding: 41px 24px 17px;
+					@include font_size-line(20px, 32px);
+					color: #000;
+					font-family: Gilroy;
+
+				}
+
+				label {
+					position: absolute;
+					top: 17px;
+					left: 24px;
+					@include font_size-line(13px, 15px);
+					color: rgba(36, 36, 36, 0.5);
+				}
+			}
+
+			button.transition {
+				@include size(307px, 70px);
+			}
+		}
+	}
+}
+
+.img_top-layer {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: url("./../img/png/cow-with-bush.png") no-repeat center bottom,
+	url("./../img/png/bush.png") no-repeat right bottom;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+
+
+@media (max-width: 970px) {
+	.bg {
+		height: 805px;
+		background: url("./../img/png/clouds.png") no-repeat center -65px,
+		url("./../img/png/clouds.png") no-repeat center -195px,
+		url("./../img/png/clouds.png") no-repeat center -270px,
+		url("./../img/png/bg-image.png") no-repeat center center;
+	}
+	main {
+		padding: 19px 10px;
+	}
+
+	.header {
+		margin-bottom: 37px;
+
+		&__logo_pict {
+			width: 93.24px;
+		}
+		&__logo_title {
+			@include font_size-line(9px, 13px);
+			max-width: 160px;
+		}
+	}
+	.section-top {
+		margin-bottom: 25px;
+
+		&__title {
+			margin-bottom: 5px;
+			@include font_size-line(10px, 12px);
+		}
+
+		&__quest {
+			@include font_size-line(15px, 20px);
+			margin-bottom: 13px;
+		}
+
+		&__items-wrapper {
+			flex-direction: column;
+			justify-content: center;
+
+			.item {
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				margin-right: 0!important;
+
+				&__logo {
+					@include size(30px, 30px);
+					margin-right: 0;
+					margin-bottom: 6px;
+
+					img {
+						@include size(100%, 100%);
+					}
+				}
+
+				&__content {
+					@include font_size-line(11px, 18px);
+				}
+			}
+
+			.item-1, .item-3 {
+				display: none;
+			}
+		}
+	}
+	.section-rect {
+		padding: 5px;
+		min-height: 332px;
+
+		.quest-line__block {
+			height: 33px;
+			padding: 11px 14px 12px;
+			margin-bottom: 4px;
+
+			.quest-line {
+				height: 6px;
+
+				.line {
+					height: 4px;
+				}
+
+				.steps__wrapper {
+					.step {
+						@include size(10px, 10px);
+					}
+				}
+			}
+		}
+
+		.quest-content__block {
+			padding: 24px;
+			min-height: 285px;
+
+			.quest__title {
+				@include font_size-line(12px, 14px);
+				margin-bottom: 20px;
+			}
+
+			.quest__main {
+				@include font_size-line(18px, 22px);
+				margin-bottom: 12px;
+			}
+
+			.input[type="number"] {
+				@include size(176px, 50px);
+				@include font_size-line(14px, 20px);
+				padding: 15px 16px 18px;
+				margin-top: 5px;
+			}
+
+			.input-radio__wrapper {
+				width: 183px;
+				padding: 4px 14px;
+
+				label {
+					@include font_size-line(10px, 26px);
+				}
+
+				&:not(:last-child) {
+					margin-bottom: 6px;
+				}
+
+				input[type="radio"] {
+
+					&:checked + label,
+					&:not(:checked) + label {
+						padding-left: 25px;
+					}
+
+					&:checked + label:before,
+					&:not(:checked) + label:before {
+						left: 0;
+						top: 5px;
+						@include size(16px, 16px);
+					}
+
+					&:checked + label:after,
+					&:not(:checked) + label:after {
+						left: 2.4px;
+						top: 7.4px;
+						@include size(11.2px, 11.2px);
+					}
+				}
+			}
+		}
+
+		button.transition {
+			bottom: 20px;
+			@include size(124px, 46px);
+			@include font_size-line(14px, 17px);
+		}
+		&.section-rect-4 {
+			.quest-content__block {
+				padding: 17px 12px;
+
+				.quest__main {
+					margin-bottom: 11px;
+				}
+
+				.inputs__container {
+					justify-content: space-between;
+
+					.input-radio__wrapper {
+						width: auto;
+						padding: 4px 8px 4px 11px;
+
+						&.tel {
+							order: 1;
+							width: 46%;
+						}
+						&.whatsapp {
+							order: 2;
+							width: 46%;
+						}
+						&.viber {
+							order: 3;
+							width: 26%;
+						}
+						&.email {
+							order: 4;
+							width: 29%;
+						}
+						&.telegram {
+							order: 5;
+							width: 33%;
+						}
+					}
+
+				}
+
+				.input-txt__wrapper {
+					margin: 7px 0 11px;
+
+					input {
+						@include size(256px, 61px);
+						padding: 24px 15px 5px;
+						@include font_size-line(14px, 32px);
+					}
+
+					label {
+						top: 11px;
+						left: 15px;
+						@include font_size-line(10px, 12px);
+					}
+				}
+
+				button.transition {
+					@include size(258px, 50px);
+				}
+			}
+		}
+	}
+	.img_top-layer {
+		width: 100%;
+		height: 100vh;
+		background: url("./../img/png/bush-2.png") no-repeat right bottom,
+		url("./../img/png/cow.png") no-repeat right bottom;
+		bottom: -207px;
+		left: 0;
+	}
+}

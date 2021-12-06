@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>System-test</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <main class="content">
+        <header class="header">
+            <div class="header__logo flex-center">
+                <a href="/" class="header__logo_link">
+                    <img src=".src/img/svg/logo.svg" alt="logo" class="header__logo_pict">
+                </a>
+                <div class="header__logo_title">Система комплексного мониторинга
+                    состояния молочных коров</div>
+            </div>
+        </header>
+        <section class="section section-top flex-col-top-center">
+            <div class="section-top__title">Ответьте на 3 вопроса и узнайте</div>
+            <div class="section-top__quest center">Как
+                <span class="color-green bold"> увеличить удой каждой коровы до&nbsp;15%</span>
+                путем
+            </div>
+            <div class="section-top__items-wrapper flex-between">
+                <div class="item item-1 flex">
+                    <div class="item__logo">
+                        <img src="./img/svg/item-logo.svg" alt="item-logo" class="logo">
+                    </div>
+                    <div class="item__content">
+                        <span class="bold">Своевременного определения половой охоты</span><br>
+                        особенно если она не&nbsp;заметна по&nbsp;внешним признакам
+                    </div>
+                </div>
+                <div class="item item-2 flex">
+                    <div class="item__logo">
+                        <img src="./img/svg/item-logo.svg" alt="item-logo" class="logo">
+                    </div>
+                    <div class="item__content">
+                        <span class="bold">Анализом состояния здоровья коровы</span><br>
+                        при наблюдении за&nbsp;жвачкой, активностью и&nbsp;температурой тела
+                    </div>
+                </div>
+                <div class="item item-3 flex">
+                    <div class="item__logo">
+                        <img src="./img/svg/item-logo.svg" alt="item-logo" class="logo">
+                    </div>
+                    <div class="item__content">
+                        <span class="bold">Выявление хромоты</span><br>
+                        предупреждением<br>и&nbsp;выявлением развития<br>хромоты
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--section-rect 1-->
+
+
+        <section id="section-rect-1" class="section section-rect section-rect-1">
+            <div class="quest-line__block block">
+                <div class="quest-line flex-between-center">
+                    <div class="line line-left inactive"></div>
+                    <div class="line line-right inactive"></div>
+                    <div class="steps__wrapper flex-between">
+                        <div class="step step-active"></div>
+                        <div class="step step-inactive"></div>
+                        <div class="step step-inactive"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="quest-content__block block flex-col-top-center">
+                <div class="quest__title">Вопрос 1</div>
+                <div class="quest__main">Сколько у вас <span class="color-green bold">дойных коров?</span></div>
+                <input class="input cursor-text" name="countCow" placeholder="Например: 45" type="number" autofocus required>
+                <button type="submit" class="transition next flex-center">
+                    <span class="next-txt">Далее</span>
+                    <span class="next-icon">
+                        <img src="./img/png/icon-next.png" alt="next">
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!--section-rect 2-->
+        <section id="section-rect-2" class="section section-rect section-rect-2 display-none">
+            <div class="quest-line__block block">
+                <div class="quest-line flex-between-center">
+                    <div class="line line-left active"></div>
+                    <div class="line line-right inactive"></div>
+                    <div class="steps__wrapper flex-between">
+                        <div class="step step-active"></div>
+                        <div class="step step-active"></div>
+                        <div class="step step-inactive"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="quest-content__block block flex-col-top-center">
+                <div class="quest__title">Вопрос 2</div>
+                <div class="quest__main">Сколько <span class="color-green bold">молока в&nbsp;сутки вы доите?</span></div>
+                <input class="input cursor-text" placeholder="Например: 12" type="number" name="countMilk" autofocus required>
+                <button type="submit" class="transition next flex-center">
+                    <span class="next-txt">Далее</span>
+                    <span class="next-icon">
+                        <img src="./img/png/icon-next.png" alt="next">
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!--section-rect 3-->
+        <section id="section-rect-3" class="section section-rect section-rect-3 display-none">
+            <div class="quest-line__block block">
+                <div class="quest-line flex-between-center">
+                    <div class="line line-left active"></div>
+                    <div class="line line-right active"></div>
+                    <div class="steps__wrapper flex-between">
+                        <div class="step step-active"></div>
+                        <div class="step step-active"></div>
+                        <div class="step step-active"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="quest-content__block block flex-col-top-center">
+                <div class="quest__title">Вопрос 3</div>
+                <div class="quest__main"><span class="color-green bold">Вы являетесь?</span></div>
+                <div class="inputs__container">
+                    <div class="input-radio__wrapper flex">
+                        <input type="radio" id="boss" name="position" value="Руководитель фермы">
+                        <label for="boss">Руководителем фермы</label>
+                    </div>
+                    <div class="input-radio__wrapper flex">
+                        <input type="radio" id="technician" name="position" value="Зоотехник">
+                        <label for="technician">Зоотехником</label>
+                    </div>
+                    <div class="input-radio__wrapper flex">
+                        <input type="radio" id="veterinarian" name="position" value="Ветеринар">
+                        <label for="veterinarian">Ветеринаром</label>
+                    </div>
+                </div>
+                <button type="submit" class="transition next flex-center">
+                    <span class="next-txt">Далее</span>
+                    <span class="next-icon">
+                        <img src="./img/png/icon-next.png" alt="next">
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!--section-rect 4-->
+        <section id="section-rect-4" class="section section-rect section-rect-4 display-none">
+            <div class="quest-line__block block">
+                <div class="quest-line flex-between-center">
+                    <div class="line line-left active"></div>
+                    <div class="line line-right active"></div>
+                    <div class="steps__wrapper flex-between">
+                        <div class="step step-active"></div>
+                        <div class="step step-active"></div>
+                        <div class="step step-active"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="quest-content__block block flex-col-top-center">
+                <div class="quest__main"><span class="color-green bold">Куда прислать вам ответ?</span></div>
+                <div class="inputs__container flex-wrap-center">
+                    <div class="input-radio__wrapper tel flex">
+                        <input type="radio" id="tel" name="contact" value="Телефон" checked>
+                        <label for="tel">По телефону</label>
+                    </div>
+                    <div class="input-radio__wrapper email flex">
+                        <input type="radio" id="e-mail" name="contact" value="e-mail">
+                        <label for="e-mail">E-mail</label>
+                    </div>
+                    <div class="input-radio__wrapper viber flex">
+                        <input type="radio" id="viber" name="contact" value="viber">
+                        <label for="viber">Viber</label>
+                    </div>
+                    <div class="input-radio__wrapper telegram flex-start-center">
+                        <input type="radio" id="telegram" name="contact" value="telegram">
+                        <label for="telegram">Telegram</label>
+                    </div>
+                    <div class="input-radio__wrapper whatsapp flex-start-center">
+                        <input type="radio" id="whatsapp" name="contact" value="whatsapp">
+                        <label for="whatsapp">Whatsapp</label>
+                    </div>
+                </div>
+
+                <form id="ajax_form" action="" method="post">
+                    <div id="input-tel" class="input-txt__wrapper tel">
+                        <input type="tel" name="phone" id="inp-phone" placeholder="+375 (__) ___-__-__" autofocus>
+                        <label for="tel">Введите ваш номер телефона</label>
+                    </div>
+                    <div id="input-email" class="input-txt__wrapper email display-none">
+                        <input type="inp-email" name="email" type="text" id="inp-email" placeholder="simple@example.com" autofocus required autocomplete>
+                        <label for="tel">Введите ваш e-mail</label>
+                    </div>
+                    <div id="input-viber" class="input-txt__wrapper viber display-none">
+                        <input type="tel" name="viber" id="inp-viber" placeholder="+375 (__) ___-__-__" autofocus>
+                        <label for="tel">Введите ваш номер Viber</label>
+                    </div>
+                    <div id="input-telegram" class="input-txt__wrapper telegram display-none">
+                        <input type="tel" name="telegram" id="inp-telegram" placeholder="+375 (__) ___-__-__" autofocus>
+                        <label for="tel">Введите ваш номер Telegram</label>
+                    </div>
+                    <div id="input-whatsapp" class="input-txt__wrapper whatsapp display-none">
+                        <input type="tel" name="whatsapp" id="inp-whatsapp" placeholder="+375 (__) ___-__-__" autofocus>
+                        <label for="tel">Введите ваш номер Whatsapp</label>
+                    </div>
+
+                    <button type="submit" id="sendData" name="submit" class="transition submit">Отправить и получить ответ</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="img_top-layer">
+        <!--<img src="./img/png/cow-with-bush.png" alt="cow-with-bush">-->
+    </div>
+    <!--<script src="js/script.js"></script>-->
+</body>
+</html>

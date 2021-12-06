@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "name": "system-test",
+  "description": "system (test project)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "node-sass": "^7.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "serve": "browser-sync start --server --files 'dist/css/*.css, **/*.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarinaGoretskaya/system-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarinaGoretskaya/system-test/issues"
+  },
+  "homepage": "https://github.com/MarinaGoretskaya/system-test#readme"
+}
