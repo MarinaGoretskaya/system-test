@@ -1,0 +1,44 @@
+@import "../main/common/pattern";
+
+.desc-menu {
+	display: none;
+
+	.desc-menu__item {
+		@include font_size-line(13px, 15.6px);
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+		padding-left: 60px;
+		white-space: nowrap;
+
+		.active {
+			color: #43ABF0;
+		}
+
+	}
+	.desc-menu__item.active a {
+		color: #43ABF0;
+	}
+
+	.desc-menu__item > a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.desc-menu__item:hover > a {
+		color: #2173f0;
+		transition: all 0.5s ease;
+	}
+
+	.desc-menu__item:active > a {
+		color: #85acf0;
+	}
+
+}
+
+
+@media (min-width: 992px) {
+	.desc-menu {
+		display: block;
+	}
+}

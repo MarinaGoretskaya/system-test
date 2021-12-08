@@ -1,0 +1,54 @@
+@import "common/reset";
+@import "common/fonts";
+@import "common/pattern";
+
+@import "common/container";
+
+@import "banner/banner";
+@import "order/order";
+
+
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Lato, sans-serif;
+	font-style: normal;
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: normal;
+	position: relative;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+.bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include size(100%, 100%);
+	z-index: -1;
+
+	//overflow: hidden;
+	//min-width: 300px;
+
+	//.outer-bg {
+	//	max-width: 1920px;
+	//	background: #fff;
+	//	margin: 0 auto;
+	//}
+}
+
+main {
+	//padding: 41px 20px;
+}
+
+.section {
+	position: relative;
+}
+
+

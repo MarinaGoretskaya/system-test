@@ -7,219 +7,204 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>System-test</title>
     <link rel="stylesheet" type="text/css" href="dist/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="bg"></div>
-    <main class="content">
+
+        <!--header-->
         <header class="header">
-            <div class="header__logo flex-center">
-                <a href="/" class="header__logo_link">
-                    <img src="./src/img/svg/logo.svg" alt="logo" class="header__logo_pict">
-                </a>
-                <div class="header__logo_title">Система комплексного мониторинга
-                    состояния молочных коров</div>
+            <div class="container">
+                <div class="header__row flex flex-wrap-between">
+                    <div class="header__col col-logo">
+                        <div class="logo">
+                            <a href="/" class="logo__link">
+                                <img src="./src/img/svg/logo.svg" alt="logo" title="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__col col-menu">
+                        <a href="#" class="menu-button"><img src="src/img/png/burger.png"></a>
+                        <div class="mobile-menu" style="display: none;">
+                            <ul id="accordeon" class="mobile-menu__inner">
+                                <li class="mobile-menu__item"><a href="index.html" class="link">Бизнес</a></li>
+                                <li class="mobile-menu__item"><a href="#" class="link">О нас</a></li>
+                                <li class="mobile-menu__item"><a href="#" class="link">Цены</a></li>
+                                <li class="mobile-menu__item"><a href="#" class="link">Оформить заказ</a></li>
+                            </ul>
+                        </div>
+                        <nav class="desc-menu">
+                            <ul class="desc-menu__inner flex">
+                                <li class="desc-menu__item active"><a href="index.html">Бизнес</a></li>
+                                <li class="desc-menu__item"><a href="#">О нас</a></li>
+                                <li class="desc-menu__item"><a href="#">Цены</a></li>
+                                <li class="desc-menu__item"><a href="#">Оформить заказ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </header>
-        <section class="section section-top flex-col-top-center">
-            <div class="section-top__title">Ответьте на 3 вопроса и узнайте</div>
-            <div class="section-top__quest center">Как
-                <span class="color-green bold"> увеличить удой каждой коровы до&nbsp;15%</span>
-                путем
-            </div>
-            <div class="section-top__items-wrapper flex-between">
-                <div class="item item-1 flex">
-                    <div class="item__logo">
-                        <img src="./src/img/svg/item-logo.svg" alt="item-logo" class="logo">
+
+        <main class="g-main">
+
+                <!--banner-->
+                <section class="section banner">
+                    <div class="bg-picture"></div>
+                    <div class="container">
+                        <div class="banner-content">
+                            <h1><span class="highlight">Lorem ipsum</span> dolor sit amet consectetur <span class="highlight">adipiscing</span></h1>
+
+                            <div class="descr">
+                                <div class="descr__title">At vero eos et accusamus et iusto odio dignissimos ducimus!</div>
+                                <div class="descr__txt">
+                                    <ul>
+                                        <li>Totam rem aperiam eaque ipsa</li>
+                                        <li>Sit voluptatem accusantium doloremque laudantium</li>
+                                        <li>Sed ut perspiciatis, unde omnis iste natus error</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="buttons flex">
+                                <button class="button buttons__order">заказать</button>
+                                <button class="button buttons__more">подробнее</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="item__content">
-                        <span class="bold">Своевременного определения половой охоты</span><br>
-                        особенно если она не&nbsp;заметна по&nbsp;внешним признакам
+                </section>
+
+                <!--form order-->
+                <section class="section order">
+                <div class="bg-picture"></div>
+                <div class="container">
+                    <div class="order__top center">
+                        <h2>Оформление <span class="highlight">Заказа</span></h2>
+                        <p>Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
+                    </div>
+                    <div class="order__teasers teasers flex-wrap-between">
+                        <hr class="hr-dotted hr-1">
+                        <hr class="hr-dotted hr-2">
+                        <hr class="hr-dotted hr-3">
+                        <div class="item flex-col-top-center">
+                            <div class="pict flex-center"><img src="src/img/svg/loupe.svg" alt="loupe"></div>
+                            <div class="text">Lorem ipsum dolor sit amet</div>
+                        </div>
+                        <div class="item flex-col-top-center">
+                            <div class="pict flex-center"><img src="src/img/svg/percent.svg" alt="percent"></div>
+                            <div class="text">Сonsecteturadipiscing elit</div>
+                        </div>
+                        <div class="item flex-col-top-center">
+                            <div class="pict flex-center"><img src="src/img/svg/file.svg" alt="file"></div>
+                            <div class="text">Sed do eiusmod tempor</div>
+                        </div>
+                        <div class="item flex-col-top-center">
+                            <div class="pict flex-center"><img src="src/img/svg/mail.svg" alt="mail"></div>
+                            <div class="text">Esse cillum dolore eu fugiat</div>
+                        </div>
+                        <div class="item flex-col-top-center">
+                            <div class="pict flex-center"><img src="src/img/svg/money.svg" alt="money"></div>
+                            <div class="text">Excepteur sint occaecat cupidatat non proident</div>
+                        </div>
+                    </div>
+
+                    <div class="order__form form">
+                            <form id="form-order" class="form-order" method="post" action="/order/" novalidate="novalidate">
+                                <fieldset class="form-order__top flex-wrap-between">
+                                    <div class="form-group">
+                                        <select class="select">
+                                            <option selected disabled hidden>Выберите тип системы</option>
+                                            <option>Sed ut perspiciatis</option>
+                                            <option>Nemo enim ipsam</option>
+                                            <option>Et harum quidem</option>
+                                            <option>Temporibus autem</option>
+                                            <option>Itaque earum rerum</option>
+                                            <option>Sed ut perspiciatis</option>
+                                            <option>Nemo enim ipsam</option>
+                                            <option>Et harum quidem</option>
+                                            <option>Temporibus autem</option>
+                                            <option>Itaque earum rerum</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="form-control" type="email" name="EMAIL" required="" placeholder="Ваш e-mail" aria-required="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" type="name" name="NAME" required="" placeholder="Ваше имя" aria-required="true">
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="form-order__bottom flex-between">
+                                    <div class="slidecontainer">
+                                        <div class="slidecontainer_inner flex-between">
+                                            <div class="slidecontainer__title">Sed ut perspiciatis, unde omnis iste natus</div>
+                                            <div id="demo" class="slidecontainer__value"></div>
+                                        </div>
+                                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    </div>
+                                    <button class="button add-file"><img src="../../src/img/jpg/add-file.jpg">Прикрепить файл</button>
+                                </fieldset>
+
+                                <fieldset class="form-order__submit flex-center">
+                                    <button type="submit" class="button send">Отправить</button>
+                                </fieldset>
+
+                            </form>
+
+                        </form>
                     </div>
                 </div>
-                <div class="item item-2 flex">
-                    <div class="item__logo">
-                        <img src="./src/img/svg/item-logo.svg" alt="item-logo" class="logo">
-                    </div>
-                    <div class="item__content">
-                        <span class="bold">Анализом состояния здоровья коровы</span><br>
-                        при наблюдении за&nbsp;жвачкой, активностью и&nbsp;температурой тела
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                    <div class="footer__row flex flex-wrap-between">
+                        <div class="footer__col copyright">
+                            <div class="copyright__text">
+                                ©&nbsp;2018&nbsp;«LoremIpsum.net» Все&nbsp;права защищены.
+                            </div>
+                        </div>
+
+                        <div class="footer__col payment flex-around">
+                            <div class="payment__item item flex-center">
+                                <div class="icon"><img src="./src/img/png/payment/qiwi.png" alt="Qiwi"></div>
+                                <div class="text">Qiwi wallet</div>
+                            </div>
+                            <div class="payment__item item flex-center">
+                                <div class="icon"><img src="./src/img/png/payment/yandex-money.png" alt="yandex-money"></div>
+                                <div class="text">Yandex Money</div>
+                            </div>
+                            <div class="payment__item item flex-center">
+                                <div class="icon"><img src="./src/img/png/payment/web-money.png" alt="web-money"></div>
+                                <div class="text">Web Money</div>
+                            </div>
+                        </div>
+
+                        <div class="footer__col contacts flex">
+                            <a class="contacts__link" href="mailto:info@ipsum228.com" itemprop="email">
+                                <div class="contacts__item item flex">
+                                    <div class="icon"><img src="./src/img/png/contacts/mail.png" alt="mail"></div>
+                                    <div class="text">info@ipsum228.com</div>
+                                </div>
+                            </a>
+                            <a  class="contacts__link" href="https://vk.com/">
+                                <div class="contacts__item contacts__item item flex">
+                                    <div class="icon"><img src="./src/img/png/contacts/vk.png" alt="vk"></div>
+                                    <div class="text">Мы вконтакте</div>
+                                </div>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
-                <div class="item item-3 flex">
-                    <div class="item__logo">
-                        <img src="./src/img/svg/item-logo.svg" alt="item-logo" class="logo">
-                    </div>
-                    <div class="item__content">
-                        <span class="bold">Выявление хромоты</span><br>
-                        предупреждением<br>и&nbsp;выявлением развития<br>хромоты
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--section-rect 1-->
+        </footer>
 
 
-        <section id="section-rect-1" class="section section-rect section-rect-1">
-            <div class="quest-line__block block">
-                <div class="quest-line flex-between-center">
-                    <div class="line line-left inactive"></div>
-                    <div class="line line-right inactive"></div>
-                    <div class="steps__wrapper flex-between">
-                        <div class="step step-active"></div>
-                        <div class="step step-inactive"></div>
-                        <div class="step step-inactive"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="quest-content__block block flex-col-top-center">
-                <div class="quest__title">Вопрос 1</div>
-                <div class="quest__main">Сколько у вас <span class="color-green bold">дойных коров?</span></div>
-                <input class="input cursor-text" name="countCow" placeholder="Например: 45" type="number" autofocus required>
-                <button type="submit" class="transition next flex-center">
-                    <span class="next-txt">Далее</span>
-                    <span class="next-icon">
-                        <img src="./src/img/png/icon-next.png" alt="next">
-                    </span>
-                </button>
-            </div>
-        </section>
 
-        <!--section-rect 2-->
-        <section id="section-rect-2" class="section section-rect section-rect-2 display-none">
-            <div class="quest-line__block block">
-                <div class="quest-line flex-between-center">
-                    <div class="line line-left active"></div>
-                    <div class="line line-right inactive"></div>
-                    <div class="steps__wrapper flex-between">
-                        <div class="step step-active"></div>
-                        <div class="step step-active"></div>
-                        <div class="step step-inactive"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="quest-content__block block flex-col-top-center">
-                <div class="quest__title">Вопрос 2</div>
-                <div class="quest__main">Сколько <span class="color-green bold">молока в&nbsp;сутки вы доите?</span></div>
-                <input class="input cursor-text" placeholder="Например: 12" type="number" name="countMilk" autofocus required>
-                <button type="submit" class="transition next flex-center">
-                    <span class="next-txt">Далее</span>
-                    <span class="next-icon">
-                        <img src="./src/img/png/icon-next.png" alt="next">
-                    </span>
-                </button>
-            </div>
-        </section>
 
-        <!--section-rect 3-->
-        <section id="section-rect-3" class="section section-rect section-rect-3 display-none">
-            <div class="quest-line__block block">
-                <div class="quest-line flex-between-center">
-                    <div class="line line-left active"></div>
-                    <div class="line line-right active"></div>
-                    <div class="steps__wrapper flex-between">
-                        <div class="step step-active"></div>
-                        <div class="step step-active"></div>
-                        <div class="step step-active"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="quest-content__block block flex-col-top-center">
-                <div class="quest__title">Вопрос 3</div>
-                <div class="quest__main"><span class="color-green bold">Вы являетесь?</span></div>
-                <div class="inputs__container">
-                    <div class="input-radio__wrapper flex">
-                        <input type="radio" id="boss" name="position" value="Руководитель фермы">
-                        <label for="boss">Руководителем фермы</label>
-                    </div>
-                    <div class="input-radio__wrapper flex">
-                        <input type="radio" id="technician" name="position" value="Зоотехник">
-                        <label for="technician">Зоотехником</label>
-                    </div>
-                    <div class="input-radio__wrapper flex">
-                        <input type="radio" id="veterinarian" name="position" value="Ветеринар">
-                        <label for="veterinarian">Ветеринаром</label>
-                    </div>
-                </div>
-                <button type="submit" class="transition next flex-center">
-                    <span class="next-txt">Далее</span>
-                    <span class="next-icon">
-                        <img src="./src/img/png/icon-next.png" alt="next">
-                    </span>
-                </button>
-            </div>
-        </section>
 
-        <!--section-rect 4-->
-        <section id="section-rect-4" class="section section-rect section-rect-4 display-none">
-            <div class="quest-line__block block">
-                <div class="quest-line flex-between-center">
-                    <div class="line line-left active"></div>
-                    <div class="line line-right active"></div>
-                    <div class="steps__wrapper flex-between">
-                        <div class="step step-active"></div>
-                        <div class="step step-active"></div>
-                        <div class="step step-active"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="quest-content__block block flex-col-top-center">
-                <div class="quest__main"><span class="color-green bold">Куда прислать вам ответ?</span></div>
-                <div class="inputs__container flex-wrap-center">
-                    <div class="input-radio__wrapper tel flex">
-                        <input type="radio" id="tel" name="contact" value="Телефон" checked>
-                        <label for="tel">По телефону</label>
-                    </div>
-                    <div class="input-radio__wrapper email flex">
-                        <input type="radio" id="e-mail" name="contact" value="e-mail">
-                        <label for="e-mail">E-mail</label>
-                    </div>
-                    <div class="input-radio__wrapper viber flex">
-                        <input type="radio" id="viber" name="contact" value="viber">
-                        <label for="viber">Viber</label>
-                    </div>
-                    <div class="input-radio__wrapper telegram flex-start-center">
-                        <input type="radio" id="telegram" name="contact" value="telegram">
-                        <label for="telegram">Telegram</label>
-                    </div>
-                    <div class="input-radio__wrapper whatsapp flex-start-center">
-                        <input type="radio" id="whatsapp" name="contact" value="whatsapp">
-                        <label for="whatsapp">Whatsapp</label>
-                    </div>
-                </div>
-
-                <form id="ajax_form" action="" method="post">
-                    <div id="input-tel" class="input-txt__wrapper tel">
-                        <input type="tel" name="phone" id="inp-phone" placeholder="+375 (__) ___-__-__" autofocus>
-                        <label for="tel">Введите ваш номер телефона</label>
-                    </div>
-                    <div id="input-email" class="input-txt__wrapper email display-none">
-                        <input type="inp-email" name="email" type="text" id="inp-email" placeholder="simple@example.com" autofocus required autocomplete>
-                        <label for="tel">Введите ваш e-mail</label>
-                    </div>
-                    <div id="input-viber" class="input-txt__wrapper viber display-none">
-                        <input type="tel" name="viber" id="inp-viber" placeholder="+375 (__) ___-__-__" autofocus>
-                        <label for="tel">Введите ваш номер Viber</label>
-                    </div>
-                    <div id="input-telegram" class="input-txt__wrapper telegram display-none">
-                        <input type="tel" name="telegram" id="inp-telegram" placeholder="+375 (__) ___-__-__" autofocus>
-                        <label for="tel">Введите ваш номер Telegram</label>
-                    </div>
-                    <div id="input-whatsapp" class="input-txt__wrapper whatsapp display-none">
-                        <input type="tel" name="whatsapp" id="inp-whatsapp" placeholder="+375 (__) ___-__-__" autofocus>
-                        <label for="tel">Введите ваш номер Whatsapp</label>
-                    </div>
-
-                    <button type="submit" id="sendData" name="submit" class="transition submit">Отправить и получить ответ</button>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <div class="img_top-layer">
-        <!--<img src="./img/png/cow-with-bush.png" alt="cow-with-bush">-->
-    </div>
-    <!--<script src="js/script.js"></script>-->
+    <script src="src/js/script.js"></script>
 </body>
 </html>

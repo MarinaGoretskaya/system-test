@@ -1,0 +1,63 @@
+@import "../../common/pattern";
+
+.teasers {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	position: relative;
+
+	.item {
+		width: 209px;
+		margin-bottom: 30px;
+	}
+
+	.pict {
+		@include size(100px, 100px);
+		background-color: #3E9CDC;
+		border-radius: 50px;
+		border: 5px solid #286690;
+		margin-bottom: 20px;
+	}
+
+	.text {
+		text-align: center;
+	}
+}
+
+.hr-dotted {
+	padding: 0;
+	height: 0;
+	border: none;
+	border-width: 0 0 6px;
+	border-style: solid;
+	border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="13" height="3"><circle fill="%23C4C4C4" cx="10" cy="10" r="10"></circle></svg>') 0 0 100% repeat;
+	-moz-border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="13" height="3"><circle fill="%23C4C4C4" cx="10" cy="10" r="10"></circle></svg>') 0 0 100% repeat;
+	background-position: 50%;
+	box-sizing: border-box;
+	color: #C4C4C4;
+	position: absolute;
+	top: 90px;
+	z-index: -1;
+	left: 100px;
+	right: 100px;
+}
+
+.hr-2, .hr-3 {
+	display: none;
+}
+
+@media (max-width: 991px) {
+	.hr-2 {
+		display: inline-block;
+		top: 260px;
+	}
+}
+
+@media (max-width: 438px) {
+	.hr-dotted {
+		display: none;
+	}
+	.order__teasers.teasers {
+		justify-content: center;
+	}
+}
+

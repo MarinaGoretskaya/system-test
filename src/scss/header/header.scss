@@ -1,0 +1,35 @@
+@import "../main/common/reset";
+@import "../main/common/fonts";
+@import "../main/common/pattern";
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 101;
+	opacity: 1;
+	background: rgba(16, 16, 29, 0.9);
+}
+
+.header__row {
+	padding: 33.5px 0;
+}
+
+.col-menu {
+	position: relative;
+}
+
+.logo img {
+	margin-right: 15.14px;
+	max-width: 247px;
+}
+
+@import "desc-menu";
+@import "mobile-menu";
+
+@media (max-width: 576px) {
+	.logo img {
+		max-width: 200px;
+	}
+}

@@ -1,0 +1,98 @@
+/////CURSOR
+.cursor-pointer {
+	cursor: pointer;
+}
+.cursor-text {
+	cursor: text;
+}
+
+/////DISPLAY
+.inline-block {
+	display: inline-block;
+}
+.display-block {
+	display: block;
+}
+.display-none {
+	display: none;
+}
+
+/////FLEXBOX
+.flex {
+	display: flex;
+}
+.flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.flex-around {
+	display: flex;
+	justify-content: space-around;
+}
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+}
+.flex-wrap-between {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.flex-wrap-center {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.flex-start-center {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.flex-between-center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex-col-top-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+/////COLORS
+$green: #50B520;
+$lightgray: #F4F4F4;
+
+.color-green {
+	color: $green;
+}
+.bg-green {
+	color: $green;
+}
+
+
+/////FONT
+@mixin font_size-line($size, $line-height) {
+	font-size: $size;
+	line-height: $line-height;
+}
+.bold {
+	font-weight: bold;
+	font-family: Lato;
+}
+.center {
+	text-align: center;
+}
+
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
