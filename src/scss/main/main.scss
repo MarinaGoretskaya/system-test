@@ -20,6 +20,7 @@ body {
 	line-height: 18px;
 	font-weight: normal;
 	position: relative;
+	background-color: #c1c1c1;
 }
 
 *, *::before, *::after {
@@ -27,28 +28,17 @@ body {
 }
 
 .bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	@include size(100%, 100%);
-	z-index: -1;
-
-	//overflow: hidden;
-	//min-width: 300px;
-
-	//.outer-bg {
-	//	max-width: 1920px;
-	//	background: #fff;
-	//	margin: 0 auto;
-	//}
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
 }
 
-main {
-	//padding: 41px 20px;
+.g-main {
+	position: relative;
+	top: -89px;
+	margin-bottom: -89px;
 }
 
 .section {
 	position: relative;
 }
-
-

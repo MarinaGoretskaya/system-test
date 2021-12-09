@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="bg"></div>
+    <div class="bg">
 
         <!--header-->
         <header class="header">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="header__col col-menu">
-                        <a href="#" class="menu-button"><img src="src/img/png/burger.png"></a>
+                        <a href="#" class="menu-button"><img src="./src/img/png/burger.png"></a>
                         <div class="mobile-menu" style="display: none;">
                             <ul id="accordeon" class="mobile-menu__inner">
                                 <li class="mobile-menu__item"><a href="index.html" class="link">Бизнес</a></li>
@@ -75,8 +75,8 @@
 
                 <!--form order-->
                 <section class="section order">
-                <div class="bg-picture"></div>
-                <div class="container">
+                    <div class="bg-picture"></div>
+                    <div class="container">
                     <div class="order__top center">
                         <h2>Оформление <span class="highlight">Заказа</span></h2>
                         <p>Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!</p>
@@ -106,24 +106,24 @@
                             <div class="text">Excepteur sint occaecat cupidatat non proident</div>
                         </div>
                     </div>
-
                     <div class="order__form form">
                             <form id="form-order" class="form-order" method="post" action="/order/" novalidate="novalidate">
                                 <fieldset class="form-order__top flex-wrap-between">
-                                    <div class="form-group">
-                                        <select class="select">
-                                            <option selected disabled hidden>Выберите тип системы</option>
-                                            <option>Sed ut perspiciatis</option>
-                                            <option>Nemo enim ipsam</option>
-                                            <option>Et harum quidem</option>
-                                            <option>Temporibus autem</option>
-                                            <option>Itaque earum rerum</option>
-                                            <option>Sed ut perspiciatis</option>
-                                            <option>Nemo enim ipsam</option>
-                                            <option>Et harum quidem</option>
-                                            <option>Temporibus autem</option>
-                                            <option>Itaque earum rerum</option>
-                                        </select>
+                                    <div class="select">
+                                        <input class="select__input" type="hidden" name="">
+                                        <div class="select__head">Выберите тип системы</div>
+                                        <ul class="select__list" style="display: none;">
+                                            <li class="select__item">Sed ut perspiciatis</li>
+                                            <li class="select__item">Nemo enim ipsam</li>
+                                            <li class="select__item">Et harum quidem</li>
+                                            <li class="select__item">Temporibus autem</li>
+                                            <li class="select__item">Itaque earum rerum</li>
+                                            <li class="select__item">Sed ut perspiciatis</li>
+                                            <li class="select__item">Nemo enim ipsam</li>
+                                            <li class="select__item">Et harum quidem</li>
+                                            <li class="select__item">Temporibus autem</li>
+                                            <li class="select__item">Itaque earum rerum</li>
+                                        </ul>
                                     </div>
 
                                     <div class="form-group">
@@ -142,7 +142,7 @@
                                         </div>
                                         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                                     </div>
-                                    <button class="button add-file"><img src="../../src/img/jpg/add-file.jpg">Прикрепить файл</button>
+                                    <button class="button add-file"><img src="./src/img/jpg/add-file.jpg">Прикрепить файл</button>
                                 </fieldset>
 
                                 <fieldset class="form-order__submit flex-center">
@@ -154,56 +154,54 @@
                         </form>
                     </div>
                 </div>
-            </section>
+                </section>
 
         </main>
 
         <footer class="footer">
-            <div class="container">
-                    <div class="footer__row flex flex-wrap-between">
-                        <div class="footer__col copyright">
-                            <div class="copyright__text">
-                                ©&nbsp;2018&nbsp;«LoremIpsum.net» Все&nbsp;права защищены.
-                            </div>
-                        </div>
-
-                        <div class="footer__col payment flex-around">
-                            <div class="payment__item item flex-center">
-                                <div class="icon"><img src="./src/img/png/payment/qiwi.png" alt="Qiwi"></div>
-                                <div class="text">Qiwi wallet</div>
-                            </div>
-                            <div class="payment__item item flex-center">
-                                <div class="icon"><img src="./src/img/png/payment/yandex-money.png" alt="yandex-money"></div>
-                                <div class="text">Yandex Money</div>
-                            </div>
-                            <div class="payment__item item flex-center">
-                                <div class="icon"><img src="./src/img/png/payment/web-money.png" alt="web-money"></div>
-                                <div class="text">Web Money</div>
-                            </div>
-                        </div>
-
-                        <div class="footer__col contacts flex">
-                            <a class="contacts__link" href="mailto:info@ipsum228.com" itemprop="email">
-                                <div class="contacts__item item flex">
-                                    <div class="icon"><img src="./src/img/png/contacts/mail.png" alt="mail"></div>
-                                    <div class="text">info@ipsum228.com</div>
+                <div class="container">
+                        <div class="footer__row flex flex-wrap-between">
+                            <div class="footer__col copyright">
+                                <div class="copyright__text">
+                                    ©&nbsp;2018&nbsp;«LoremIpsum.net» Все&nbsp;права защищены.
                                 </div>
-                            </a>
-                            <a  class="contacts__link" href="https://vk.com/">
-                                <div class="contacts__item contacts__item item flex">
-                                    <div class="icon"><img src="./src/img/png/contacts/vk.png" alt="vk"></div>
-                                    <div class="text">Мы вконтакте</div>
-                                </div>
-                            </a>
+                            </div>
 
+                            <div class="footer__col payment flex-around">
+                                <div class="payment__item item flex-center">
+                                    <div class="icon"><img src="./src/img/png/payment/qiwi.png" alt="Qiwi"></div>
+                                    <div class="text">Qiwi wallet</div>
+                                </div>
+                                <div class="payment__item item flex-center">
+                                    <div class="icon"><img src="./src/img/png/payment/yandex-money.png" alt="yandex-money"></div>
+                                    <div class="text">Yandex Money</div>
+                                </div>
+                                <div class="payment__item item flex-center">
+                                    <div class="icon"><img src="./src/img/png/payment/web-money.png" alt="web-money"></div>
+                                    <div class="text">Web Money</div>
+                                </div>
+                            </div>
+
+                            <div class="footer__col contacts flex">
+                                <a class="contacts__link" href="mailto:info@ipsum228.com" itemprop="email">
+                                    <div class="contacts__item item flex">
+                                        <div class="icon"><img src="./src/img/png/contacts/mail.png" alt="mail"></div>
+                                        <div class="text">info@ipsum228.com</div>
+                                    </div>
+                                </a>
+                                <a  class="contacts__link" href="https://vk.com/">
+                                    <div class="contacts__item contacts__item item flex">
+                                        <div class="icon"><img src="./src/img/png/contacts/vk.png" alt="vk"></div>
+                                        <div class="text">Мы вконтакте</div>
+                                    </div>
+                                </a>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-        </footer>
+            </footer>
 
-
-
-
+    </div>
 
     <script src="src/js/script.js"></script>
 </body>

@@ -1,4 +1,4 @@
-/////CURSOR
+///// CURSOR
 .cursor-pointer {
 	cursor: pointer;
 }
@@ -6,7 +6,7 @@
 	cursor: text;
 }
 
-/////DISPLAY
+///// DISPLAY
 .inline-block {
 	display: inline-block;
 }
@@ -17,7 +17,7 @@
 	display: none;
 }
 
-/////FLEXBOX
+///// FLEXBOX
 .flex {
 	display: flex;
 }
@@ -66,7 +66,7 @@
 	align-items: center;
 }
 
-/////COLORS
+///// COLORS
 $green: #50B520;
 $lightgray: #F4F4F4;
 
@@ -78,7 +78,7 @@ $lightgray: #F4F4F4;
 }
 
 
-/////FONT
+///// FONT
 @mixin font_size-line($size, $line-height) {
 	font-size: $size;
 	line-height: $line-height;
@@ -91,7 +91,7 @@ $lightgray: #F4F4F4;
 	text-align: center;
 }
 
-
+///// SIZE
 @mixin size($width, $height) {
 	width: $width;
 	height: $height;

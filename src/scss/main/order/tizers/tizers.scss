@@ -29,8 +29,6 @@
 	border: none;
 	border-width: 0 0 6px;
 	border-style: solid;
-	border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="13" height="3"><circle fill="%23C4C4C4" cx="10" cy="10" r="10"></circle></svg>') 0 0 100% repeat;
-	-moz-border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="13" height="3"><circle fill="%23C4C4C4" cx="10" cy="10" r="10"></circle></svg>') 0 0 100% repeat;
 	background-position: 50%;
 	box-sizing: border-box;
 	color: #C4C4C4;
@@ -39,9 +37,12 @@
 	z-index: -1;
 	left: 100px;
 	right: 100px;
+	border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="13" height="3"><circle fill="%23C4C4C4" cx="10" cy="10" r="10"></circle></svg>') 0 0 100% repeat;
+	-moz-border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="13" height="3"><circle fill="%23C4C4C4" cx="10" cy="10" r="10"></circle></svg>') 0 0 100% repeat;
 }
 
-.hr-2, .hr-3 {
+.hr-2,
+.hr-3 {
 	display: none;
 }
 
@@ -60,4 +61,3 @@
 		justify-content: center;
 	}
 }
-
